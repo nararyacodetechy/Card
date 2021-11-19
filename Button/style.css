@@ -1,0 +1,74 @@
+*{
+  margin: 0;
+  padding: 0; 
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    width: 480px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.container a{
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    margin: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    color: rgb(5, 5, 5);
+    transition: 0.5s;
+}
+.container a:nth-child(1){
+    background: linear-gradient(to right,#6d1dd6,#fbc2eb,#a18cd1);
+    background-size: 200%;
+}
+.container a:nth-child(2){
+    background: linear-gradient(to right,#43e97b,#0e62b1,#43e97b);
+    background-size: 200%;
+}
+.container a:nth-child(3){
+    background: linear-gradient(to right,#d16837,#960a8f,#0264b4);
+    background-size: 200%;
+}
+.container a:nth-child(4){
+    background: linear-gradient(to right,#ee5555,#e6e214,#ccd18c);
+    background-size: 200%;
+}
+.container a:nth-child(5){
+    background: linear-gradient(to right,#32e42c,#cf1c16,#a18cd1);
+    background-size: 200%;
+}
+.container a:nth-child(6){
+    background: linear-gradient(to right,#17c97f,#c2f4fb,#a5d18c);
+    background-size: 200%;
+}
+.container a:hover{
+    background-position-x: 100%;
+    transform: translateY(-15px);
+}
+.container a::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    width: 90%;
+    height: 4px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 50%;
+    filter: blur(5);
+    transform: scale(0);
+    transition: 0.5s;
+    z-index: -1;
+}
+.container a:hover:before{
+    transform: scale(1);
+    bottom: -15px;
+}

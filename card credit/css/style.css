@@ -1,0 +1,140 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#73c1ff,#fff);
+}
+.payment{
+    position: relative;
+    padding: 0px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.5s;
+}
+.payment:hover{
+    padding: 40px;
+}
+.payment .bg{
+    position: absolute;
+    background: linear-gradient(225deg,#2196f3,#ff4efd);
+    bottom: 0;
+    height: 70%;
+    width: 100%;
+    border-radius: 20px;
+}
+.payment .card{
+    position: relative;
+    width: 580px;
+    height: 350px;
+    background-color: #fcfcfc;
+    border-radius: 15px;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.05);
+    padding: 40px;
+    overflow: hidden;
+    z-index: 1000;
+    transform: translateY(127px);
+    transition: 0.5s;
+}
+.payment:hover .card{
+    transform: translateY(0);
+    
+}
+.payment .card img.chip-card{
+    position: absolute;
+    display: flex;
+    width: 70px; 
+}
+.payment .card::before{
+    content: '';
+    left: -20%;
+    top: -50%;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to bottom,rgba(194, 7, 7, 0.05),transparent);
+    width: 500px;
+    height: 500px;
+}
+.logo{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #ea222c;
+    border-radius: 50%;
+    box-shadow: -40px 0 0 rgba(255, 164, 36, 0.5);
+    right: 40px;
+    top: 150px;
+}
+.payment .card .bankname{
+    color: #999;
+    text-align: end;
+    outline: none;
+    width: 100%;
+    position: relative;
+    font-size: 1.5em;
+}
+form{
+    margin-top: 45px;
+    position: relative;
+}
+.inputbox{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+.inputbox span{
+    color: rgb(33, 125, 211);
+    font-size: 1.1em;
+}
+.inputbox input{
+    margin-top: 5px;
+    font-size: 25px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #333;
+}
+.group{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.group span.password{
+    text-align: center;
+}
+.group input.password{
+    text-align: center;
+}
+.group .inputbox:last-child{
+    max-width: 60px;
+}
+button.btn{
+    position: relative;
+    margin-top: 40px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: #fff;
+    color: #333;
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+    transition: 2s;
+}
+button.btn:hover{
+    background: linear-gradient(50deg,rgb(140, 30, 243),rgb(71, 102, 236));
+    min-height: 100%;
+    color: #fcfcfc;
+    opacity: 0.8;
+}
